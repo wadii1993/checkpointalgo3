@@ -1,0 +1,31 @@
+FUNCTION dot_prod(v1,v2: ARRAY_OF FLOAT) : FLOAT
+VAR
+    n,m,i:INTEGER
+    point: FLOAT
+BEGIN
+    n:=v1.length-1
+    m:=v2.length-1
+    point:=0
+    IF (n<>m) THEN
+        Write ("you cannot calculate the point product")
+    ELSE
+        FOR i FROM 0 TO n STEP 1  DO
+            point:=point+v1[i]*v2[j]
+        END_FOR
+    END_IF
+    RETURN point ;
+END
+ALGORITHM orthogonal_product
+VAR
+    v : ARRAY_OF ARRAY;
+    i,j:INTEGER;
+BEGIN
+    FOR i FROM 0 TO v.leth-2 STEP 1  DO
+        FOR j FROM i+1 TO v.length-1 STEP 1 DO
+        dot_prod (v[i],v[j],point)
+        IF (point=0) THEN
+        Write (v[i]," AND ",v[j], "Are orthogonal")
+        END_IF
+        END_FOR
+    END_FOR
+END
